@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     66819,       1595]
-NotebookOptionsPosition[     65982,       1572]
-NotebookOutlinePosition[     66410,       1589]
-CellTagsIndexPosition[     66367,       1586]
+NotebookDataLength[     66974,       1599]
+NotebookOptionsPosition[     66137,       1576]
+NotebookOutlinePosition[     66565,       1593]
+CellTagsIndexPosition[     66522,       1590]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -107,7 +107,7 @@ Cell[BoxData[
       "Treq", ",", "lTreq", ",", "Mreq", ",", "mutp", ",", "garPct", ",", 
       "perovPct", ",", "hemPct"}], "]"}], ";"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
-   RowBox[{"(*", "input", "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", "input", "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"samples", "=", 
      RowBox[{"{", 
@@ -127,7 +127,17 @@ Cell[BoxData[
     RowBox[{"hemPcts", "=", 
      RowBox[{"{", 
       RowBox[{"0.027", ",", "0.039", ",", "0.06", ",", "0.05"}], "}"}]}], 
-    ";"}], "\[IndentingNewLine]", 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "masses", " ", "and", " ", "volumes", " ", "are", " ", "not", " ", 
+       "exact"}], ";", " ", 
+      RowBox[{
+      "total", " ", "number", " ", "of", " ", "molecules", " ", "will", " ", 
+       "not", " ", "be", " ", "correct"}]}], ",", " ", 
+     RowBox[{"but", " ", "ratios", " ", "will", " ", "be"}]}], "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"masses", "=", 
      RowBox[{"{", 
@@ -145,6 +155,22 @@ Cell[BoxData[
        RowBox[{"7.973", " ", 
         RowBox[{"10", "^", 
          RowBox[{"-", "3"}]}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"volumes", "=", 
+     RowBox[{"{", " ", 
+      RowBox[{
+       RowBox[{"2.098", " ", 
+        RowBox[{"10", "^", 
+         RowBox[{"-", "6"}]}]}], " ", ",", 
+       RowBox[{"2.098", " ", 
+        RowBox[{"10", "^", 
+         RowBox[{"-", "6"}]}]}], ",", " ", 
+       RowBox[{"2", " ", 
+        RowBox[{"10", "^", 
+         RowBox[{"-", "8"}]}]}], ",", 
+       RowBox[{"2.098", " ", 
+        RowBox[{"10", "^", 
+         RowBox[{"-", "6"}]}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
@@ -180,10 +206,9 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"Tm", "=", "400"}], ";"}], "  ", 
    RowBox[{"(*", 
-    RowBox[{"maximum", ",", " ", "K"}], "*)"}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
+    RowBox[{"maximum", ",", " ", "K"}], "*)"}], "\n", "\[IndentingNewLine]", 
    RowBox[{"(*", 
-    RowBox[{"physical", " ", "constants"}], "*)"}], "\n", 
+    RowBox[{"physical", " ", "constants"}], "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"NA", "=", 
      RowBox[{"6.02", " ", 
@@ -205,7 +230,7 @@ Cell[BoxData[
        RowBox[{"-", "16"}]}]}]}], " ", ";"}], 
    RowBox[{"(*", 
     RowBox[{"Boltzmann", ",", " ", 
-     RowBox[{"erg", "/", "K"}]}], "*)"}], "\n", "\[IndentingNewLine]", 
+     RowBox[{"erg", "/", "K"}]}], "*)"}], "\[IndentingNewLine]", "\n", 
    RowBox[{"(*", 
     RowBox[{"field", " ", "coefficients", " ", "in", " ", 
      RowBox[{"mol", "/", "cc"}]}], "*)"}], "\[IndentingNewLine]", 
@@ -286,7 +311,7 @@ Cell[BoxData[
     RowBox[{"Sa", "=", 
      RowBox[{"5", "/", "2"}]}], ";"}], 
    RowBox[{"(*", 
-    RowBox[{"Fe", " ", "spin"}], "*)"}], "\n", "\[IndentingNewLine]", 
+    RowBox[{"Fe", " ", "spin"}], "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"Sd", "=", 
      RowBox[{"5", "/", "2"}]}], ";"}], 
@@ -296,14 +321,6 @@ Cell[BoxData[
    RowBox[{"(*", "calculations", "*)"}], "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"g", "-", "factors"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{"gc", "=", 
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{"Lc", "+", 
-        RowBox[{"2", " ", "Sc"}]}], ")"}], "/", 
-      RowBox[{"(", 
-       RowBox[{"Lc", "+", "Sc"}], ")"}]}]}], "*)"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"gc", "=", 
      RowBox[{"1", "+", 
@@ -345,23 +362,20 @@ Cell[BoxData[
    RowBox[{"(*", 
     RowBox[{"rare", " ", "earth", " ", "spin"}], "*)"}], "\n", 
    RowBox[{
-    RowBox[{"ga", "=", "2."}], ";"}], 
-   "                                                                          \
-                                          ", 
+    RowBox[{"ga", "=", "2."}], ";"}], " ", 
    RowBox[{"(*", 
     RowBox[{"Fe", ",", 
      RowBox[{"all", " ", "spin"}]}], "*)"}], "\n", 
    RowBox[{
-    RowBox[{"gd", "=", "2."}], ";"}], 
-   "                                                                          \
-                                          ", 
+    RowBox[{"gd", "=", "2."}], ";"}], " ", 
    RowBox[{"(*", 
     RowBox[{"Fe", ",", 
-     RowBox[{"all", " ", "spin"}]}], "*)"}], "\n", "\[IndentingNewLine]", 
+     RowBox[{"all", " ", "spin"}]}], "*)"}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
      RowBox[{"initial", " ", "magnetization"}], ",", 
-     RowBox[{"T", "=", "0"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"T", "=", "0"}]}], "*)"}], "\n", 
    RowBox[{
     RowBox[{"muc0", "=", 
      RowBox[{"3.", " ", "gc", " ", "Jc", " ", "muB", " ", "NA"}]}], ";"}], "\n", 
@@ -371,9 +385,9 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"mud0", "=", 
      RowBox[{"3.", " ", "gd", " ", "Sd", " ", "muB", " ", "NA"}]}], ";"}], 
-   "\n", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", 
-    RowBox[{"molecular", " ", "fields"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"molecular", " ", "fields"}], "*)"}], "\n", 
    RowBox[{
     RowBox[{"xc", "=", 
      RowBox[{
@@ -427,10 +441,10 @@ Cell[BoxData[
         RowBox[{"ncd", " ", 
          RowBox[{"muc", "[", "n", "]"}]}], "+", 
         RowBox[{"nad", " ", 
-         RowBox[{"mua", "[", "n", "]"}]}]}], ")"}]}]}], ";"}], "\n", 
-   "\[IndentingNewLine]", 
+         RowBox[{"mua", "[", "n", "]"}]}]}], ")"}]}]}], ";"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", 
-    RowBox[{"Brillouin", " ", "functions"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"Brillouin", " ", "functions"}], "*)"}], "\n", 
    RowBox[{
     RowBox[{"bjc", "=", 
      RowBox[{
@@ -686,12 +700,12 @@ Cell[BoxData[
         RowBox[{"{", 
          RowBox[{"T", ",", "100."}], "}"}]}], "]"}], "[", 
       RowBox[{"[", 
-       RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";"}], "\n", 
+       RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{
     "contribution", " ", "of", " ", "rare", " ", "earth", " ", "at", " ", 
-     "Tc"}], "*)"}], "\[IndentingNewLine]", 
+     "Tc"}], "*)"}], "\n", 
    RowBox[{
     RowBox[{"sxtc", "=", 
      RowBox[{
@@ -754,25 +768,8 @@ Cell[BoxData[
     RowBox[{"mO", "=", "15.999"}], ";"}], 
    RowBox[{"(*", 
     RowBox[{
-     RowBox[{"O", " ", "mass"}], ",", " ", "u"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"v03f1", " ", "=", " ", 
-     RowBox[{"2.118", " ", 
-      RowBox[{"10", "^", 
-       RowBox[{"-", "6"}]}]}]}], ";"}], 
-   RowBox[{"(*", 
-    RowBox[{
-     RowBox[{"sample", " ", "volume"}], ",", " ", 
-     RowBox[{"m", "^", "3"}]}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"v03f1r", " ", "=", " ", 
-     RowBox[{"2.098", " ", 
-      RowBox[{"10", "^", 
-       RowBox[{"-", "6"}]}]}]}], ";"}], 
-   RowBox[{"(*", 
-    RowBox[{
-     RowBox[{"revised", " ", "sample", " ", "volume"}], ",", " ", 
-     RowBox[{"m", "^", "3"}]}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"O", " ", "mass"}], ",", " ", "u"}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"s0", "=", "0.039"}], ";"}], 
    RowBox[{"(*", 
@@ -1012,10 +1009,7 @@ Cell[BoxData[
      RowBox[{
      "spin", " ", "density", " ", "at", " ", "sample", " ", "Tc", " ", "and", 
       " ", "sample", " ", "tc"}], " ", "+", " ", "45"}], "*)"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{"Not", " ", "purity", " ", "adjusted"}], "*)"}], 
-   "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"1", "%", " ", "uncertainty", " ", "in", " ", "coeffs"}], "*)"}], 
    "\[IndentingNewLine]", 
@@ -1087,51 +1081,56 @@ Cell[BoxData[
           RowBox[{"imuat", "[", "300", "]"}], "+", 
           RowBox[{"imudt", "[", "300", "]"}]}], ")"}]}]}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"Now", ",", " ", 
+     RowBox[{
+     "adjust", " ", "those", " ", "values", " ", "for", " ", "purity"}]}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ng", "=", 
+     RowBox[{"garPct", " ", 
+      RowBox[{"mass", "/", 
+       RowBox[{"(", 
+        RowBox[{"u", " ", "mTbIG"}], ")"}]}]}]}], ";"}], 
+   RowBox[{"(*", 
+    RowBox[{"molecules", " ", "of", " ", "garnet"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"np", " ", "=", " ", 
+     RowBox[{"perovPct", " ", 
+      RowBox[{"mass", "/", 
+       RowBox[{"(", 
+        RowBox[{"u", " ", "mPerov"}], ")"}]}]}]}], ";"}], 
+   RowBox[{"(*", 
+    RowBox[{"molecules", " ", "of", " ", "perovskite"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"nh", " ", "=", " ", 
+     RowBox[{"hemPct", " ", 
+      RowBox[{"mass", "/", 
+       RowBox[{"(", 
+        RowBox[{"u", " ", "mHemat"}], ")"}]}]}]}], ";"}], " ", 
+   RowBox[{"(*", 
+    RowBox[{"molecules", " ", "of", " ", "hematite"}], "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"n", "=", 
+     RowBox[{"ng", "+", "np", "+", "nh"}]}], ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"If", "[", 
      RowBox[{
       RowBox[{
        RowBox[{"samples", "[", 
         RowBox[{"[", "i", "]"}], "]"}], "==", "\"\<prelim\>\""}], ",", 
-      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
       RowBox[{"(*", 
        RowBox[{
        "Converting", " ", "model", " ", "spin", " ", "excess", " ", "to", " ",
          "what", " ", "would", " ", "be", " ", "expected", " ", "from", " ", 
         "spring", " ", "8", " ", "prelim", " ", "measurement"}], "*)"}], 
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "ratio", " ", "of", " ", "moment", " ", "at", " ", "2.5", "T", " ", 
+        "to", " ", "0", "T"}], "*)"}], "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"ng", "=", 
-        RowBox[{"garPct", " ", 
-         RowBox[{"mass", "/", 
-          RowBox[{"(", 
-           RowBox[{"u", " ", "mTbIG"}], ")"}]}]}]}], ";", 
-       RowBox[{"(*", 
-        RowBox[{"molecules", " ", "of", " ", "garnet"}], "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"np", " ", "=", " ", 
-        RowBox[{"perovPct", " ", 
-         RowBox[{"mass", "/", 
-          RowBox[{"(", 
-           RowBox[{"u", " ", "mPerov"}], ")"}]}]}]}], ";", 
-       RowBox[{"(*", 
-        RowBox[{"molecules", " ", "of", " ", "perovskite"}], "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"nh", " ", "=", " ", 
-        RowBox[{"hemPct", " ", 
-         RowBox[{"mass", "/", 
-          RowBox[{"(", 
-           RowBox[{"u", " ", "mHemat"}], ")"}]}]}]}], ";", " ", 
-       RowBox[{"(*", 
-        RowBox[{"molecules", " ", "of", " ", "hematite"}], "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"n", "=", 
-        RowBox[{"ng", "+", "np", "+", "nh"}]}], ";", "\[IndentingNewLine]", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{
-        "ratio", " ", "of", " ", "moment", " ", "at", " ", "2.5", "T", " ", 
-         "to", " ", "0", "T"}], "*)"}], "\[IndentingNewLine]", 
        RowBox[{"momentratio", " ", "=", " ", 
         RowBox[{"Around", "[", 
          RowBox[{"4.4", ",", "0.3"}], "]"}]}], ";", "\[IndentingNewLine]", 
@@ -1368,9 +1367,11 @@ demagnetizing: \>\"", ",",
    3.952731311435111*^9, 3.9527313220219603`*^9}, {3.952731439374557*^9, 
    3.95273149256397*^9}, {3.9527319517321243`*^9, 3.9527319518376503`*^9}, {
    3.9527319850298233`*^9, 3.952731985253034*^9}, {3.952732032882332*^9, 
-   3.952732033550118*^9}, {3.952732116246817*^9, 3.9527321217697906`*^9}},
- CellLabel->
-  "In[14276]:=",ExpressionUUID->"e5c64249-8b30-5f40-bee3-cc571672467a"],
+   3.952732033550118*^9}, {3.952732116246817*^9, 3.9527321217697906`*^9}, {
+   3.952732363934766*^9, 3.952732390183552*^9}, {3.952732437657877*^9, 
+   3.952732591940675*^9}, 
+   3.9527326870011187`*^9},ExpressionUUID->"e5c64249-8b30-5f40-bee3-\
+cc571672467a"],
 
 Cell[CellGroupData[{
 
@@ -1432,10 +1433,11 @@ Cell[BoxData[
    3.952731102803071*^9, 3.9527311212781076`*^9}, 3.952731322473363*^9, {
    3.952731467343008*^9, 3.952731492990655*^9}, 3.952731952401559*^9, 
    3.9527319856933193`*^9, {3.952732033940695*^9, 3.95273206197295*^9}, {
-   3.952732122642579*^9, 3.952732140238769*^9}},
+   3.952732122642579*^9, 3.952732140238769*^9}, 3.9527325087346973`*^9, 
+   3.952732544420224*^9, 3.952732596440879*^9},
  CellLabel->
   "During evaluation of \
-In[14276]:=",ExpressionUUID->"720067a5-87f2-42bb-a72a-ccdf9af5e7f7"],
+In[14552]:=",ExpressionUUID->"0e8ee222-2d24-4644-b8f0-aa567fc0de00"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1494,10 +1496,11 @@ Cell[BoxData[
    3.952731102803071*^9, 3.9527311212781076`*^9}, 3.952731322473363*^9, {
    3.952731467343008*^9, 3.952731492990655*^9}, 3.952731952401559*^9, 
    3.9527319856933193`*^9, {3.952732033940695*^9, 3.95273206197295*^9}, {
-   3.952732122642579*^9, 3.952732140239621*^9}},
+   3.952732122642579*^9, 3.952732140238769*^9}, 3.9527325087346973`*^9, 
+   3.952732544420224*^9, 3.952732596445537*^9},
  CellLabel->
   "During evaluation of \
-In[14276]:=",ExpressionUUID->"2040cc7d-2dda-4e16-92ca-a93a44cd5610"],
+In[14552]:=",ExpressionUUID->"9744c87c-d59e-4ca7-bbde-892d80032b10"],
 
 Cell[BoxData[
  InterpretationBox[
@@ -1563,10 +1566,11 @@ demagnetizing: \"\>", "\[InvisibleSpace]",
    3.952731102803071*^9, 3.9527311212781076`*^9}, 3.952731322473363*^9, {
    3.952731467343008*^9, 3.952731492990655*^9}, 3.952731952401559*^9, 
    3.9527319856933193`*^9, {3.952732033940695*^9, 3.95273206197295*^9}, {
-   3.952732122642579*^9, 3.952732140244277*^9}},
+   3.952732122642579*^9, 3.952732140238769*^9}, 3.9527325087346973`*^9, 
+   3.952732544420224*^9, 3.952732596446694*^9},
  CellLabel->
   "During evaluation of \
-In[14276]:=",ExpressionUUID->"9a43238f-c8b3-42c1-a3b1-adca9fdca827"]
+In[14552]:=",ExpressionUUID->"6fa007a2-c978-421a-85f3-33565bafbea1"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -1590,11 +1594,11 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 2742, 62, 534, "Input",ExpressionUUID->"a3a0bde7-1229-7b41-af81-fdf2472d938d"],
 Cell[CellGroupData[{
-Cell[3325, 86, 50035, 1286, 7326, "Input",ExpressionUUID->"e5c64249-8b30-5f40-bee3-cc571672467a"],
+Cell[3325, 86, 49974, 1287, 7213, "Input",ExpressionUUID->"e5c64249-8b30-5f40-bee3-cc571672467a"],
 Cell[CellGroupData[{
-Cell[53385, 1376, 4137, 61, 34, "Print",ExpressionUUID->"720067a5-87f2-42bb-a72a-ccdf9af5e7f7"],
-Cell[57525, 1439, 4080, 60, 34, "Print",ExpressionUUID->"2040cc7d-2dda-4e16-92ca-a93a44cd5610"],
-Cell[61608, 1501, 4346, 67, 34, "Print",ExpressionUUID->"9a43238f-c8b3-42c1-a3b1-adca9fdca827"]
+Cell[53324, 1377, 4209, 62, 34, "Print",ExpressionUUID->"0e8ee222-2d24-4644-b8f0-aa567fc0de00"],
+Cell[57536, 1441, 4152, 61, 34, "Print",ExpressionUUID->"9744c87c-d59e-4ca7-bbde-892d80032b10"],
+Cell[61691, 1504, 4418, 68, 34, "Print",ExpressionUUID->"6fa007a2-c978-421a-85f3-33565bafbea1"]
 }, Open  ]]
 }, Open  ]]
 }
